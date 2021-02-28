@@ -1,0 +1,225 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html,
+body,
+.wrapper {
+    height: 100%;
+}
+
+body {
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+h1{
+    font-size: 48px;
+
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1;
+}
+.logo{
+    font-weight: bold;
+    font-size: 24px;
+
+}
+
+.logo-phone{
+    font-size: 18px;
+    text-align: right;
+    font-weight: 500;
+    line-height: 14px;
+
+}
+
+.logo-time{
+    font-size: 11px;
+}
+
+.hero{
+    font-size: 20px;
+}
+
+.header,
+.footer {
+    flex-shrink: 0;
+}
+
+.header {
+    background-color: #F8F6F7;
+    position: relative;
+    overflow: hidden;
+}
+
+.header .container {
+    position: relative;
+    padding: 30px 0 130px;
+
+}
+
+.header-top {
+    margin-bottom: 188px;
+}
+
+.header .social {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.header-girl {
+    position: absolute;
+    right: 90px;
+    bottom: 0;
+    max-width: 524px;
+    max-height: 510px;
+    width: 100%;
+}
+
+.header-girl:before {
+    content: '';
+    width: 472px;
+    height: 472px;
+    background-color: #FB9475;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -110px;
+    right: 0;
+    z-index: 0;
+}
+
+.header-girl img {
+    position: relative;
+    z-index: 1;
+    display: block;
+
+}
+
+.btn-large{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 17px 30px;
+    background: #FB9475;
+    border-radius: 48px;
+    color: #FFFFFF;
+    border-color: #FB9475;
+
+}
+
+.section {
+    padding: 50px 0;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 108px;
+}
+
+.about-descr {
+    max-width: 568px;
+    width: 100%;
+}
+
+.about-descr-header{
+    font-size: 20px;
+    line-height: 32px;
+    margin-top: 32px;
+
+}
+
+
+.about-descr-text {
+
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.benefit-header{
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    margin-top: 28px;
+
+}
+
+.benefit-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.about-video {
+    max-width: 442px;
+    width: 100%;
+}
+
+nav li:first-child {
+    display: inline;
+    font-size: 14px;
+}
+
+nav li:not(:first-child)  {
+    display: inline;
+    font-size: 14px;
+    margin: 0px 0px 0px 28px;
+}
+
+li{
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+
+ul{
+    padding-left: 0px;
+}
+nav{
+    text-align: center;
+    padding-right: 0px;
+    margin: 0px;
+}
+
+a{
+    color: #278AFF;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #00BF78;
+}
+
+.col{
+    text-align: center;
+}
+
+.footer {
+    font-size: 12px;
+    line-height: 15px;
+}
