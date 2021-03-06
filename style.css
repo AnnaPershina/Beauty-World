@@ -12,6 +12,10 @@ body,
     height: 100%;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
 
 body {
     color: #333333;
@@ -19,7 +23,7 @@ body {
     font-size: 16px;
 }
 
-h1{
+h1 {
     font-size: 48px;
 
 }
@@ -30,33 +34,66 @@ h2 {
     margin: 0;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
+nav li:first-child {
+    display: inline;
+    font-size: 14px;
+}
+
+nav li:not(:first-child) {
+    display: inline;
+    font-size: 14px;
+    margin: 0px 0px 0px 28px;
+}
+
+li {
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+
+ul {
+    padding-left: 0px;
+}
+
+nav {
+    text-align: center;
+    padding-right: 0px;
+    margin: 0px;
+}
+
+a {
+    color: #278AFF;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #00BF78;
 }
 
 .main {
     flex: 1;
 }
-.logo{
+
+.logo {
     font-weight: bold;
     font-size: 24px;
-
 }
 
-.logo-phone{
+.logo-phone {
     font-size: 18px;
     text-align: right;
     font-weight: 500;
     line-height: 14px;
-
 }
 
-.logo-time{
+.logo-time {
     font-size: 11px;
 }
 
-.hero{
+.hero {
     font-size: 20px;
 }
 
@@ -74,7 +111,6 @@ h2 {
 .header .container {
     position: relative;
     padding: 30px 0 130px;
-
 }
 
 .header-top {
@@ -86,7 +122,6 @@ h2 {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-
 }
 
 .header-girl {
@@ -115,10 +150,9 @@ h2 {
     position: relative;
     z-index: 1;
     display: block;
-
 }
 
-.btn-large{
+.btn-large {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,7 +161,6 @@ h2 {
     border-radius: 48px;
     color: #FFFFFF;
     border-color: #FB9475;
-
 }
 
 .section {
@@ -149,22 +182,19 @@ h2 {
     font-size: 20px;
     line-height: 32px;
     margin-top: 32px;
-
 }
 
 
 .about-descr-text {
-
     font-size: 16px;
     line-height: 26px;
 }
 
-.benefit-header{
+.benefit-header {
     font-size: 18px;
     line-height: 22px;
     font-weight: 600;
     margin-top: 28px;
-
 }
 
 .benefit-text {
@@ -175,48 +205,49 @@ h2 {
 
 .about-video {
     max-width: 442px;
+    max-height: 295px;
     width: 100%;
+
 }
 
-nav li:first-child {
-    display: inline;
-    font-size: 14px;
+.about-video img {
+
+    z-index: 1;
+    display: block;
+
 }
 
-nav li:not(:first-child)  {
-    display: inline;
-    font-size: 14px;
-    margin: 0px 0px 0px 28px;
+.about-video-background {
+    position: relative;
+    bottom:58px;
+    display: block;
 }
 
-li{
-    list-style-type: none;
-    padding-bottom: 20px;
+
+.btn-play {
+    max-width: 58px;
+    max-height: 58px;
+    display: block;
+    position: relative;
+    left: 200px;
+    top: 130px;
+    z-index: 1;
 }
 
-ul{
-    padding-left: 0px;
-}
-nav{
-    text-align: center;
-    padding-right: 0px;
-    margin: 0px;
+.btn-play-text {
+    position: relative;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0em;
+    top: 142px;
+
+    z-index: 1;
+
+    color: #FFFFFF;
+text-align: center;
 }
 
-a{
-    color: #278AFF;
-}
-
-nav a{
-    color: black;
-    text-decoration: none;
-}
-
-nav a:hover{
-    color: #00BF78;
-}
-
-.col{
+.col {
     text-align: center;
 }
 
