@@ -171,6 +171,7 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     margin-bottom: 108px;
+    margin-top: 32px;
 }
 
 .about-descr {
@@ -178,16 +179,17 @@ nav a:hover {
     width: 100%;
 }
 
-.about-descr-header{
+.about-descr-header {
     font-size: 20px;
     line-height: 32px;
-    margin-top: 32px;
+    margin-bottom: 16px;
 }
 
 
 .about-descr-text {
     font-size: 16px;
     line-height: 26px;
+    margin-bottom: 16px;
 }
 
 .benefit-header {
@@ -201,28 +203,16 @@ nav a:hover {
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
+    margin-top: 12px;
 }
 
 .about-video {
     max-width: 442px;
     max-height: 295px;
     width: 100%;
-
+    background-image: url(./img/picture-video.png);
+    opacity: 0.8;
 }
-
-.about-video img {
-
-    z-index: 1;
-    display: block;
-
-}
-
-.about-video-background {
-    position: relative;
-    bottom:58px;
-    display: block;
-}
-
 
 .btn-play {
     max-width: 58px;
@@ -230,7 +220,7 @@ nav a:hover {
     display: block;
     position: relative;
     left: 200px;
-    top: 130px;
+    top: 112px;
     z-index: 1;
 }
 
@@ -239,12 +229,10 @@ nav a:hover {
     font-size: 16px;
     line-height: 26px;
     letter-spacing: 0em;
-    top: 142px;
-
+    top: 122px;
     z-index: 1;
-
     color: #FFFFFF;
-text-align: center;
+    text-align: center;
 }
 
 .col {
