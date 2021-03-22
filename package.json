@@ -1,0 +1,35 @@
+{
+  "name": "beauty-world",
+  "version": "1.0.0",
+  "description": "First training project",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnaPershina/Beauty-World.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnnaPershina/Beauty-World/issues"
+  },
+  "homepage": "https://github.com/AnnaPershina/Beauty-World#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.2.8"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "cssnano": "^4.1.10",
+    "del": "^6.0.0",
+    "normalize.css": "^8.0.1"
+  }
+}

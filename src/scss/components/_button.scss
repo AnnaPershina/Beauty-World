@@ -1,0 +1,19 @@
+.btn {
+  font-size: 12px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px 20px;
+  background: #FB9475;
+  border-radius: 34px;
+  color: #FFFFFF;
+  border-color: #FB9475;
+
+  &_large {
+    display: flex;
+    padding: 17px 30px;
+    border-radius: 48px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
