@@ -38,7 +38,7 @@ h2 {
     margin-bottom: 32px;
 }
 
-.container{
+.container {
     max-width: 1140px;
     width: 100%;
 }
@@ -48,8 +48,7 @@ h2 {
 .navigation {
     text-align: center;
 
-    &__item
-    {
+    &__item {
         display: inline;
         font-size: 14px;
         padding-left: 0px;
@@ -75,13 +74,16 @@ h2 {
         color: #00BF78;
     }
 }
+
+
 .social {
     padding-left: 0px;
 
     &__item {
-    list-style-type: none;
-    padding-bottom: 20px;
-}
+        list-style-type: none;
+        padding-bottom: 20px;
+    }
+
     &_contact {
         display: inline;
         padding: 24px 24px 24px 0px;
@@ -139,6 +141,8 @@ a {
         transition: 0.3s opacity;
     }
 }
+
+
 .header-girl {
     max-width: 524px;
     max-height: 510px;
@@ -163,24 +167,34 @@ a {
         display: block;
     }
 }
+
 .hero {
+    position: relative;
+    z-index: 3;
+
     &__title {
-         margin-bottom: 16px;
+        margin-bottom: 16px;
     }
 
     &__subtitle {
         margin: 16px 0px 60px 0px;
         font-size: 20px;
     }
+
+    &__btn {
+        flex-direction: column;
+    }
 }
 
 
 .header-phone {
+
    &__number {
        font-size: 18px;
        font-weight: 500;
        line-height: 14px;
    }
+
     &__time{
         font-size: 11px;
         padding-top: 8px ;
@@ -207,7 +221,6 @@ a {
     margin-top: 32px;
 
     &__descr {
-      //  max-width: 568px;
         width: 100%;
         text-align: left;
     }
@@ -230,7 +243,6 @@ a {
         height: 295px;
         width: 100%;
         background-image: url(../img/picture-video.png);
-       // position: relative;
         z-index: 0;
         text-align: right;
     }
@@ -310,6 +322,7 @@ a {
         position: relative;
         overflow: hidden;
         cursor: pointer;
+        text-align: center;
     }
 
     &__header {
@@ -330,8 +343,8 @@ a {
     }
 }
 
-.price {
 
+.price {
     &__nav {
         text-align: left;
         margin: 35px 0px 54px 0px;
@@ -358,6 +371,7 @@ a {
     }
 }
 
+
 .master {
     background: #F8F6F7;
 
@@ -366,10 +380,12 @@ a {
     }
 }
 
+
 .master-card
-    {
+    { margin-bottom: 40px;
         &__photo {
         height: 300px;
+            max-width: 400px;
         background-position: center;
         background-repeat: no-repeat;
         border-radius: 8px;
@@ -377,6 +393,7 @@ a {
         position: relative;
         overflow: hidden;
         cursor: pointer;
+
     }
 
     &__photo:before,
@@ -438,13 +455,13 @@ a {
     }
 }
 
-.example {
-    position: absolute;
 
+.example {
     &__title {
         margin: 114px 0px 40px 0px;
         text-align: center;
     }
+
     &__photo {
         height: 338px;
         max-width: 338px;
@@ -492,20 +509,22 @@ a {
 }
 
 .registration {
+    flex-direction: column;
     background: #FFFFFF;
     box-shadow: 0px 0px 10px 0px;
     border-radius: 8px;
-    max-height: 406px;
     max-width: 445px;
     padding: 40px;
 
     &__field {
         max-height: 44px;
-       max-width: 375px;
+        max-width: 375px;
         border-radius: 4px;
         padding: 15px 16px 15px 16px;
         border: 1px solid #D8D8D8;
-        margin: 20px 0px 20px 0px;
+        margin: 0px 0px 20px 0px;
+        text-align: left;
+        color: #A0A0A0;
     }
 
     &__title {
@@ -534,11 +553,12 @@ a {
         text-align: left;
         margin-top: 15px;
     }
+
 }
 
 @media screen and (max-width: 768px) {
     .header__girl {
-        opacity: 0.6;
+        opacity: 0.5;
     }
 }
 
@@ -547,6 +567,9 @@ a {
 }
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+    .header__girl {
+        opacity: 0.5;
+    }
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -561,7 +584,7 @@ a {
     }
 
     .price {
-        &__title{
+        &__title {
             text-align: center;
         }
 
@@ -570,14 +593,16 @@ a {
             padding-bottom: 8px;
         }
 
-        &__number{
+        &__number {
             margin-bottom: 36px;
         }
     }
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-
+    .header__girl {
+        display: none;
+    }
 }
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {

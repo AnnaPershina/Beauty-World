@@ -1,19 +1,61 @@
 .btn {
   font-size: 12px;
-  flex-direction: column;
+  flex-direction: inherit;
   align-items: center;
   text-align: center;
   padding: 10px 20px;
   background: #FB9475;
   border-radius: 34px;
   color: #FFFFFF;
-  border-color: #FB9475;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  max-width: 112px;
+
+  &:hover {
+    font-size: 16px;
+    max-width: 150px;
+    transition: 0.5s;
+  }
 
   &_large {
-    display: flex;
     padding: 17px 30px;
     border-radius: 48px;
     font-size: 14px;
     font-weight: 500;
+    max-width: 204px;
+
+      &:hover {
+        max-width: 300px;
+        font-size: 18px;
+        transition: 0.5s;
+      }
   }
+
+  &:before {
+    content: '';
+    background-color: #000;
+    z-index: 1;
+    flex-direction: column;
+    position: absolute;
+    box-sizing: inherit;
+    opacity: 0;
+    transition: .15s opacity;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-size: 12px;
+    padding: 10px 20px;
+    border-radius: 34px;
+    color: #FFFFFF;
+    border: 0;
+    outline: 0;
+  }
+
+  &:hover:before {
+    opacity: 0.5;
+    transition: 0.5s;
+  }
+
 }
