@@ -57,5 +57,60 @@
     opacity: 0.5;
     transition: 0.5s;
   }
+}
 
+.btn-burger {
+  display: flex; /* используем flex для центрирования содержимого */
+  //align-items: center; /* центрируем содержимое кнопки */
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1;
+  background: #FB9475;
+  border-radius: 3px;
+  // position: fixed;
+  visibility: hidden;
+  outline: 0;
+
+  & span, &:after, &:before {
+    // display: block;
+    position: absolute;
+    // position: inherit;
+    width: 70%;
+    height: 2px;
+    background-color: #616161;
+    margin: 0 auto;
+  }
+
+  & span {
+    //position: relative;
+    top: 10px;
+  }
+
+  &:after {
+    content: '';
+    top: 20px;
+  }
+
+  &:before {
+    content: '';
+    top: 15px;
+  }
+}
+
+
+.btn-close {
+  text-align: center;
+  // color: #FB9475;
+  border: 0;
+  outline: 0;
+  background: lightgrey;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  &:hover {
+    color: #00BF78;
+  }
 }

@@ -103,7 +103,9 @@ a {
     font-size: 24px;
 }
 
+
 .header {
+    background-image: url(../img/header-background.png);
     background-color: #F8F6F7;
     position: relative;
     overflow: hidden;
@@ -123,7 +125,7 @@ a {
     }
 
     &__top {
-        margin-bottom: 188px;
+        margin-bottom: 120px;
     }
 
     &__social {
@@ -168,6 +170,7 @@ a {
     }
 }
 
+
 .hero {
     position: relative;
     z-index: 3;
@@ -201,6 +204,7 @@ a {
     }
 }
 
+
 .section__grey {
     background-color: #ccc;
 }
@@ -214,9 +218,10 @@ a {
     padding: 50px 0;
 }
 
+
 .about {
     display: flex;
-    justify-content: space-between;
+   // justify-content: space-between;
     margin-bottom: 108px;
     margin-top: 32px;
 
@@ -244,29 +249,39 @@ a {
         width: 100%;
         background-image: url(../img/picture-video.png);
         z-index: 0;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
         text-align: right;
+        justify-content: right;
     }
 
     &__video:before {
         content: '';
         background-color: #000;
         z-index: 1;
-        width: 442px;
+        max-width: 442px;
         height: 295px;
         position: absolute;
         opacity: 0;
         transition: .15s opacity;
-        transform: translateX(-100%);
-        text-align: right;
+        border-radius: 8px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin-left: 15px;
     }
 
     &__video:hover:before {
         opacity: 0.5;
+        transition: .5s opacity;
     }
 }
 
-.benefit {
 
+.benefit {
     &__header {
         font-size: 18px;
         line-height: 22px;
@@ -282,26 +297,35 @@ a {
     }
 }
 
+
 .btn-play {
     max-width: 58px;
     max-height: 58px;
-    display: block;
+    display: flex;
     position: relative;
-    left: 200px;
-    top: 112px;
     z-index: 1;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translateY(-50%);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 
     &__text {
         position: relative;
         font-size: 16px;
         line-height: 26px;
         letter-spacing: 0em;
-        top: 122px;
+        top: 50%;
+        transform: translateY(-50%);
         z-index: 1;
         color: #FFFFFF;
         text-align: center;
     }
 }
+
 
 .col {
     text-align: center;
@@ -312,8 +336,8 @@ a {
     line-height: 15px;
 }
 
-.service {
 
+.service-card {
     &__picture {
         margin:35px 0px 20px 0px;
         background-position: center;
@@ -349,6 +373,9 @@ a {
         text-align: left;
         margin: 35px 0px 54px 0px;
     }
+}
+
+.table-price {
 
     &__title {
         font-size: 18px;
@@ -481,6 +508,7 @@ a {
     }
 }
 
+
 .contact {
     background: #F8F6F7;
 
@@ -507,6 +535,7 @@ a {
         letter-spacing: 0em;
     }
 }
+
 
 .registration {
     flex-direction: column;
@@ -554,7 +583,110 @@ a {
         margin-top: 15px;
     }
 
+    &__btn {
+        text-align: center;
+    }
+
 }
+
+
+.arrow {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 3px 10px rgba(0,0,0,.15),
+    inset 0 2px 0 rgba(255,255,255,.6),
+    0 2px 0 rgba(0,0,0,.1),
+    inset 0 0 20px rgba(0,0,0,.1);
+
+   &:hover {
+
+       outline: none;
+       transition: 0.5s;
+       box-shadow: inset 0 0 20px rgba(0,0,0,.2),
+       0 2px 0 rgba(255,255,255,.4),
+       inset 0 2px 0 rgba(0,0,0,.1);
+   }
+
+    &:after {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        content: '';
+        display: block;
+        width: 25px;
+        height: 25px;
+        border-left: 3px solid #00BF78;
+        border-bottom: 3px solid #00BF78;
+    }
+
+    &__left {
+        transform: rotate(45deg);
+    }
+
+    &__right {
+       transform: rotate(235deg);
+    }
+}
+
+
+.carousel-wrapper__nav {
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+
+.tabs {
+    &__links {
+        cursor: pointer;
+        .active {
+            color: red;
+        }
+    }
+
+    &__item {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.mobile-menu {
+    background-color: lightgray;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+    transition: .15s;
+    transform: translateX(-100%);
+    z-index: 4;
+    align-items: center;
+
+    &__item {
+    font-size: 40px;
+    padding-left: 0px;
+        padding-bottom: 20px;
+        margin-top: 10%;
+    }
+
+    &__list {
+    padding-left: 0px;
+    }
+}
+
+.mobile-menu.visible {
+    transform: translateX(0);
+}
+
+
 
 @media screen and (max-width: 768px) {
     .header__girl {
@@ -583,7 +715,7 @@ a {
         text-align: center;
     }
 
-    .price {
+    .table-price {
         &__title {
             text-align: center;
         }
@@ -597,13 +729,64 @@ a {
             margin-bottom: 36px;
         }
     }
+
+    .header__nav {
+        display: none;
+    }
+
+    .btn-burger {
+        visibility: visible;
+    }
+
+    .master-card {
+        position: relative;
+        text-align: center;
+        align-items: center;
+        background-position: center;
+
+        &__photo {
+            text-align: center;
+            align-items: center;
+            margin: auto;
+        }
+    }
+
+    .about__video {
+        margin: auto;
+        &:before {
+            margin: auto;
+        }
+    }
 }
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
     .header__girl {
         display: none;
     }
+
+    .hero {
+        text-align: center;
+        &__subtitle {
+            margin-bottom: 20px;
+        }
+    }
+
+    .header {
+        &__top {
+            margin-bottom: 0;
+        }
+        &__social {
+            visibility: hidden;
+        }
+    }
+
+    .master-card {
+        text-align: center;
+        align-items: center;
+    }
 }
+
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
 

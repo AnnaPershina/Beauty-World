@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap-grid.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
@@ -19,19 +20,32 @@
                 <div class="row">
 
                     <div class= "col-lg-3 col-md-3 col-sm-12">
-                        <div class="logo header__logo">  Мир красоты </div>
+                        <button id="btn" class="btn-burger header__btn-burger"> <span></span> </button>
+                        <div id="mobileMenu" class="mobile-menu ">
+                            <nav class="navigation mobile-menu__nav">
+                                <ul class="mobile-menu__list">
+                                    <li class="mobile-menu__item"><a class="mobile-menu__link smooth-scroll" href="#price">Услуги и цены</a></li>
+                                    <li class="mobile-menu__item"><a class="mobile-menu__link smooth-scroll" href="#master">Мастера</a> </li>
+                                    <li class="mobile-menu__item"><a class="mobile-menu__link smooth-scroll" href="#example">Наши работы</a></li>
+                                    <li class="mobile-menu__item"><a class="mobile-menu__link smooth-scroll" href="#about-salon">О нас</a></li>
+                                    <li class="mobile-menu__item"><a class="mobile-menu__link smooth-scroll" href="#contact">Контакты</a></li>
+                                </ul>
+                            </nav>
+                            <button id="closeBtn" class="btn-close">Закрыть</button>
+                        </div>
+                        <div class="logo header__logo">Мир красоты </div>
                     </div>
 
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                            <nav class="navigation header__nav">
-                                <ul class="navigation__list">
-                                    <li class="navigation__item"><a class="navigation__link" href="#">Услуги и цены</a></li>
-                                    <li class="navigation__item"><a class="navigation__link" href="#">Мастера</a> </li>
-                                    <li class="navigation__item"><a class="navigation__link" href="#">Наши работы</a></li>
-                                    <li class="navigation__item"><a class="navigation__link" href="#">О нас</a></li>
-                                    <li class="navigation__item"><a class="navigation__link" href="#">Контакты</a></li>
-                                </ul>
-                            </nav>
+                        <nav class="navigation header__nav">
+                            <ul class="navigation__list">
+                                <li class="navigation__item"><a class="navigation__link smooth-scroll" href="#price">Услуги и цены</a></li>
+                                <li class="navigation__item"><a class="navigation__link smooth-scroll" href="#master">Мастера</a> </li>
+                                <li class="navigation__item"><a class="navigation__link smooth-scroll" href="#example">Наши работы</a></li>
+                                <li class="navigation__item"><a class="navigation__link smooth-scroll" href="#about-salon">О нас</a></li>
+                                <li class="navigation__item"><a class="navigation__link smooth-scroll" href="#contact">Контакты</a></li>
+                            </ul>
+                        </nav>
                     </div>
 
                     <div class="col-lg-3 col-md-3 col-sm-12">
@@ -51,7 +65,6 @@
             <div class="hero header__hero">
                 <h1 class="hero__title" >Создай свой образ <br> вместе с нами</h1>
                 <p class="hero__subtitle">Идеальный образ за 60 минут</p>
-
                 <button class="hero__btn btn btn_large col-3">Записаться онлайн</button>
             </div>
 
@@ -80,11 +93,19 @@
     </header>
 
     <main class="main">
-        <section class="section">
+
+        <!-- <section class="section">
+            <div class="container">
+                <input id="search-filed" class="search-filed" type="text">
+                <div class="users"></div>
+            </div>
+        </section>  -->
+
+        <section class="section" id="about-salon">
             <div class="container">
                 <h2>О салоне</h2>
-                <div class="about">
-                    <div class="row">
+
+                    <div class="row about">
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="about__descr">
                                 <div class="about__descr-header">
@@ -98,6 +119,7 @@
                                 </a>
                             </div>
                         </div>
+
                         <div class="col-lg-6 col-md-6 col-sm-12">
                              <div class=" about__video">
                                 <div class="btn-play">
@@ -109,10 +131,7 @@
                              </div>
                          </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="container">
                 <div class="row benefit">
                     <div class="col">
                         <div class="benefit__picture">
@@ -125,6 +144,7 @@
                             Комфорт и стиль - принцип создания кабинетов салона красоты. Только эстетика и удобство для Вас
                         </div>
                     </div>
+
                     <div class="col">
                         <div class="benefit__picture">
                             <img src="img/cosmetic.png" alt="">
@@ -136,6 +156,7 @@
                             Используем профессиональные материалы высшего качества лучших брендов
                         </div>
                     </div>
+
                     <div class="col">
                         <div class="benefit__picture">
                              <img src="img/master.png" alt="">
@@ -147,95 +168,96 @@
                             Работают только опытные мастера с чувством стиля. Смотрите наших специалистов в разделе Мастера
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="service">
             <div class="container">
                 <h2> Популярные услуги</h2>
                 <div class="row">
 
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="service">
-                            <div class="service__picture">
+                        <div class="service-card">
+                            <div class="service-card__picture">
                                 <img src="img/manicure.png" alt="">
                             </div>
-                            <div class="service__header">
+                            <div class="service-card__header">
                                 Маникюр
                             </div>
-                            <div class="service__text">
+                            <div class="service-card__text">
                                 Аппаратный, комбинированный или классический.
                             </div>
-                            <div class="service__text">
+                            <div class="service-card__text">
                                 <button class="btn col">Записаться</button>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="service">
-                            <div class="service__picture">
+                        <div class="service-card">
+                            <div class="service-card__picture">
                                 <img src="img/manicure.png" alt="">
                             </div>
-                            <div class="service__header">
+                            <div class="service-card__header">
                                 Покрытие гель-лак
                             </div>
-                            <div class="service__text">
+                            <div class="service-card__text">
                                 Гель-лак наносится в несколько слоев с использование базы и топа. Каждый слой полимеризуется в LED-лампе.
                             </div>
-                            <div class="service__text">
+                            <div class="service-card__text">
                                 <button class="btn col">Записаться</button>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="service">
-                            <div class="service__picture">
+                        <div class="service-card">
+                            <div class="service-card__picture">
                                 <img src="img/manicure.png" alt="">
                             </div>
-                            <div class="service__header">
+                            <div class="service-card__header">
                                 Бразильский маникюр
                             </div>
-                            <div class="service__text">
+                            <div class="service-card__text">
                                 Выполняется в одноразовых перчатках наполненных увлажняющим лосьоном.
                             </div>
-                            <div class="service__text">
+                            <div class="service-card__text">
                                 <button class="btn col">Записаться</button>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="service">
-                            <div class="service__picture">
+                        <div class="service-card">
+                            <div class="service-card__picture">
                                 <img src="img/manicure.png" alt="">
                             </div>
-                            <div class="service__header">
+                            <div class="service-card__header">
                                 Педикюр
                             </div>
-                            <div class="service__text">
+                            <div class="service-card__text">
                                 Аппаратный, комбинированный или классический.
                             </div>
-                            <div class="service__text">
+                            <div class="service-card__text">
                                 <button class="btn col">Записаться</button>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="service">
-                            <div class="service service__picture">
+                        <div class="service-card">
+                            <div class="service-card__picture">
                                 <img src="img/manicure.png" alt="">
                             </div>
-                            <div class="service__header">
+                            <div class="service-card__header">
                                 Парафинотерапия
                             </div>
-                            <div class="service__text">
+                            <div class="service-card__text">
                                 Благодаря этой процедуре увлажнение кожи увеличивается на 80%, также выводит токсины и укрепляет суставы.
                             </div>
-                            <div class="service__text">
+                            <div class="service-card__text">
                                 <button class="btn col">Записаться</button>
                             </div>
                         </div>
@@ -248,126 +270,471 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section price" id="price">
             <div class="container">
                 <h2>Услуги и цены</h2>
+                <div class="tabs" id="myTabs">
+                    <nav class="navigation price__nav">
+                        <ul class="navigation__list tabs__links">
+                            <li class="navigation__item"><a class="navigation__link">Стрижка и укладка</a></li>
+                            <li class="navigation__item"><a class="navigation__link">Косметология</a> </li>
+                            <li class="navigation__item"><a class="navigation__link">Маникюр и педикюр</a></li>
+                            <li class="navigation__item"><a class="navigation__link">Макияж</a></li>
+                            <li class="navigation__item"><a class="navigation__link">Брови и ресницы</a></li>
+                            <li class="navigation__item"><a class="navigation__link">Массаж</a></li>
+                        </ul>
+                    </nav>
 
-                <nav class="navigation price__nav">
-                    <ul class="navigation__list">
-                        <li class="navigation__item"><a class="navigation__link" href="#">Стрижка и укладка</a></li>
-                        <li class="navigation__item"><a class="navigation__link" href="#">Косметология</a> </li>
-                        <li class="navigation__item"><a class="navigation__link" href="#">Маникюр и педикюр</a></li>
-                        <li class="navigation__item"><a class="navigation__link" href="#">Макияж</a></li>
-                        <li class="navigation__item"><a class="navigation__link" href="#">Брови и ресницы</a></li>
-                        <li class="navigation__item"><a class="navigation__link" href="#">Массаж</a></li>
+                    <ul>
+                        <li class="tabs__item">
+                            <table class="table price__table table-price tabs__content">
+
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-6" >
+                                        <div class="table-price__title">
+                                            Женская стрижка
+                                        </div>
+                                        <div class="table-price__description">
+                                            Короткие волосы
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1300р
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Стрижка бороды и усов
+                                        </div>
+                                        <div class="table-price__description">
+                                            Короткие волосы
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1400р
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Мужская стрижка
+                                        </div>
+                                        <div class="table-price__description">
+                                            Короткие волосы
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1200р
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Экспресс укладка
+                                        </div>
+                                        <div class="table-price__description">
+                                            Короткие волосы
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1200р
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Детский стиль
+                                        </div>
+                                        <div class="table-price__description">
+                                            Короткие волосы
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1200р
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Укладка дневная
+                                        </div>
+                                        <div class="table-price__description">
+                                            Короткие волосы
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1200р
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Креативный стиль
+                                        </div>
+                                        <div class="table-price__description">
+                                            Короткие волосы
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1200р
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Прическа вечерняя (свадебная)
+                                        </div>
+                                        <div class="table-price__description">
+                                            Короткие волосы
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        3000р
+                                    </div>
+                                </div>
+
+                            </table>
+                        </li>
+
+                        <li class="tabs__item">
+                            <table class="table price__table table-price tabs__content">
+
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-6" >
+                                        <div class="table-price__title">
+                                            Пилинг лица
+                                        </div>
+                                        <div class="table-price__description">
+                                            Поверхностный
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1300р
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Чистка лица
+                                        </div>
+                                        <div class="table-price__description">
+                                            Ультразвуковая
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1400р
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Пилинг лица
+                                        </div>
+                                        <div class="table-price__description">
+                                            Срединный
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1200р
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Экспресс уход
+                                        </div>
+                                        <div class="table-price__description">
+                                            Для лица
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1200р
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Пилинг лица
+                                        </div>
+                                        <div class="table-price__description">
+                                            Глубокий
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1200р
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Консультация специалиста
+                                        </div>
+                                        <div class="table-price__description">
+                                            1 категории
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1200р
+                                    </div>
+                                </div>
+
+                            </table>
+                        </li>
+
+                        <li class="tabs__item">
+                            <table class="table price__table table-price tabs__content">
+
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-6" >
+                                        <div class="table-price__title">
+                                            Маникюр
+                                        </div>
+                                        <div class="table-price__description">
+                                            Аппаратный
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1300р
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Педикюр
+                                        </div>
+                                        <div class="table-price__description">
+                                            Аппаратный
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1400р
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Маникюр с гель-лак покрытием
+                                        </div>
+                                        <div class="table-price__description">
+                                            Kodi
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1200р
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Педикюр с гель-лак покрытием
+                                        </div>
+                                        <div class="table-price__description">
+                                            Kodi
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1200р
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Маникюр с гель-лак покрытием
+                                        </div>
+                                        <div class="table-price__description">
+                                            Bluesky
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1200р
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Педикюр с гель-лак покрытием
+                                        </div>
+                                        <div class="table-price__description">
+                                            Bluesky
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1200р
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Дизайн ногтей
+                                        </div>
+                                        <div class="table-price__description">
+                                            Риуснок красками
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1200р
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Снятие гель-лака
+                                        </div>
+                                        <div class="table-price__description">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1200р
+                                    </div>
+                                </div>
+
+                            </table>
+                        </li>
+
+                        <li class="tabs__item">
+                            <table class="table price__table table-price tabs__content">
+
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-6" >
+                                        <div class="table-price__title">
+                                            Макияж вечерний (сваднебный)
+                                        </div>
+                                        <div class="table-price__description">
+                                            Суперстойкий
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1300р
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Макияж дневной
+                                        </div>
+                                        <div class="table-price__description">
+                                            Повседневный
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1400р
+                                    </div>
+                                </div>
+
+                            </table>
+                        </li>
+
+                        <li class="tabs__item">
+                            <table class="table price__table table-price tabs__content">
+
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-6" >
+                                        <div class="table-price__title">
+                                            Наращивание ресниц
+                                        </div>
+                                        <div class="table-price__description">
+                                            Натуральное
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1300р
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Татуаж бровей
+                                        </div>
+                                        <div class="table-price__description">
+                                           Натуральный
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1400р
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Наращивание ресниц
+                                        </div>
+                                        <div class="table-price__description">
+                                            2D
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1200р
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Наращивание ресниц
+                                        </div>
+                                        <div class="table-price__description">
+                                            3D
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1200р
+                                    </div>
+                                </div>
+
+                            </table>
+                        </li>
+
+                        <li class="tabs__item">
+                            <table class="table price__table table-price tabs__content">
+
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-6" >
+                                        <div class="table-price__title">
+                                            Массаж класический
+                                        </div>
+                                        <div class="table-price__description">
+                                            Спины
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1300р
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Массаж класический
+                                        </div>
+                                        <div class="table-price__description">
+                                            Воротниковый зоны
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1400р
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Массаж спортивный
+                                        </div>
+                                        <div class="table-price__description">
+                                            30 мин.
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1200р
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <div class="table-price__title">
+                                            Массаж антицеллюлитный
+                                        </div>
+                                        <div class="table-price__description">
+                                            30 мин.
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-6 table-price__number">
+                                        1200р
+                                    </div>
+                                </div>
+
+                            </table>
+                        </li>
+
+
+                        <li class="tabs__item">манике</li>
+                        <li class="tabs__item">макияж</li>
+                        <li class="tabs__item">брови</li>
+                        <li class="tabs__item">массаж</li>
                     </ul>
-                </nav>
+                </div>
 
-                <table class="table price">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-6" >
-                            <div class="price__title">
-                                Женская стрижка
-                            </div>
-                            <div class="price__description">
-                                Короткие волосы
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 price__number">
-                            1300р
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="price__title">
-                                Стрижка бороды и усов
-                            </div>
-                            <div class="price__description">
-                                Короткие волосы
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 price__number">
-                            1400р
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="price__title">
-                                Мужская стрижка
-                            </div>
-                            <div class="price__description">
-                                Короткие волосы
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 price__number">
-                            1200р
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="price__title">
-                                Экспресс укладка
-                            </div>
-                            <div class="price__description">
-                                Короткие волосы
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 price__number">
-                            1200р
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="price__title">
-                                Детский стиль
-                            </div>
-                            <div class="price__description">
-                                Короткие волосы
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 price__number">
-                            1200р
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="price__title">
-                                Укладка дневная
-                            </div>
-                            <div class="price__description">
-                                Короткие волосы
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 price__number">
-                            1200р
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="price__title">
-                                Креативный стиль
-                            </div>
-                            <div class="price__description">
-                                Короткие волосы
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 price__number">
-                            1200р
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="price__title">
-                                Прическа вечерняя (свадебная)
-                            </div>
-                            <div class="price__description">
-                                Короткие волосы
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 price__number">
-                            3000р
-                        </div>
-                    </div>
-                </table>
             </div>
         </section>
 
-        <section class="section master">
+        <section class="section master" id="master">
             <div class="container">
                 <h2> Мастера</h2>
                 <div class="master__title">
@@ -410,27 +777,51 @@
             </div>
         </section>
 
-        <section class="section example">
+        <section class="section example" id="example">
             <div class="container">
                 <h2> Наши работы</h2>
 
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-12">
-                    <div class="example__photo"> <a href=""><img src="img/example_1.png" alt=""></a></div>
+                <div class="carousel-wrapper">
+                    <div class="carousel-wrapper__nav col">
+                        <button class="arrow arrow__left carousel-wrapper__left"></button>
+                        <button class="arrow arrow__right carousel-wrapper__right"></button>
+                    </div>
+
+                    <div class="row" id="carousel">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="example__photo">
+                                <a href="img/example_1.png" data-fancybox="images" data-caption="My caption">
+                                    <img src="img/example_1.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="example__photo">
+                                <a href="img/example_2.png" data-fancybox="images" data-caption="My caption">
+                                    <img src="img/example_2.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="example__photo">
+                                <a href="img/example_3.png" data-fancybox="images" data-caption="My caption">
+                                    <img src="img/example_3.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="example__photo">
+                                <a href="img/example_4.png" data-fancybox="images" data-caption="My caption">
+                                    <img src="img/example_4.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12">
-                    <div class="example__photo"> <a href=""><img src="img/example_2.png" alt=""></a></div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-12">
-                    <div class="example__photo"> <a href=""><img src="img/example_3.png" alt=""></a></div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-12">
-                    <div class="example__photo"> <a href=""><img src="img/example_4.png" alt=""></a></div>
-                </div>
-            </div>
                 <div class="example__title">
                     Бренды, которые мы используем в работе
                 </div>
@@ -444,7 +835,7 @@
             </div>
         </section>
 
-        <section class="section contact">
+        <section class="section contact" id="contact">
             <div class="container">
                 <h2> Контакты </h2>
                 <div class="row">
@@ -458,22 +849,22 @@
                             Мы в социальных сетях
                         </div>
                         <ul class="social contact__social">
-                        <li class="social__item social_contact"><a href=""><img src="img/logo-vk.png" alt=""></a></li>
-                        <li class="social__item social_contact"><a href=""><img src="img/logo-instagram.png" alt=""></a></li>
-                        <li class="social__item social_contact"><a href=""><img src="img/logo-youtube.png" alt=""></a></li>
+                            <li class="social__item social_contact"><a href=""><img src="img/logo-vk.png" alt=""></a></li>
+                            <li class="social__item social_contact"><a href=""><img src="img/logo-instagram.png" alt=""></a></li>
+                            <li class="social__item social_contact"><a href=""><img src="img/logo-youtube.png" alt=""></a></li>
                         </ul>
 
                     </div>
                     <div class="col">
-                        <form class="registration">
+                        <form class="registration" id="contact-form">
                             <div class="registration__title">
                                 Быстрая запись
                             </div>
                             <div class="registration__text">
                                  Наш менеджер перезвонит в течение нескольких минут, уточнит подробности и согласует время.
                             </div>
-                                <input type="text" class="registration__field col" name="username" placeholder="Ваше имя">
-                                <input type="text" class="registration__field col" name="userphone" placeholder="+7 (___) ___-__-__">
+                            <input type="text" class="registration__field col" name="username" placeholder="Ваше имя">
+                            <input type="text" class="registration__field col" name="userphone" placeholder="+7 (___) ___-__-__">
                             <div>
                                 <button class="btn col">Записаться</button>
                             </div>
@@ -503,10 +894,10 @@
                 <div class="col">
                     <nav class="navigation">
                         <ul class="navigation__list">
-                            <li class="navigation__item"><a href="#">Услуги и цены</a></li>
-                            <li class="navigation__item"><a href="#">Мастера</a> </li>
-                            <li class="navigation__item"><a href="#">Наши работы</a></li>
-                            <li class="navigation__item"><a href="#">Контакты</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#price">Услуги и цены</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#master">Мастера</a> </li>
+                            <li class="navigation__item"><a class="navigation__link" href="#example">Наши работы</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#contact">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -515,6 +906,16 @@
         </div>
     </footer>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+<script src="./js/mobile-menu.js"></script>
+<script src="./js/smooth-scroll.js"></script>
+<script src="./js/main.js" type="module"></script>
+
 
 </body>
 </html>
